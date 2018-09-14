@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7ba438c3_c5ee255d",
+        "filename": "src/jemalloc.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 879,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-09-14T15:11:12Z",
+      "side": 1,
+      "message": "environment",
+      "range": {
+        "startLine": 879,
+        "startChar": 42,
+        "endLine": 879,
+        "endChar": 53
+      },
+      "revId": "de6ba4d582dc665a98b851ac2582bf2e15283c4e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4fd3b454_dd84e518",
+        "filename": "src/pages.c",
+        "patchSetId": 3
+      },
+      "lineNbr": 591,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-09-14T15:11:12Z",
+      "side": 1,
+      "message": "add the separate Bug: line for this?",
+      "revId": "de6ba4d582dc665a98b851ac2582bf2e15283c4e",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
