@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "92364e04_32b30500",
+        "filename": "src/large.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2018-11-01T21:48:00Z",
+      "side": 1,
+      "message": "I debated this a bit, and settled on ANDROID only. My idea was that this is only for VA issues because the zygote takes up took much space, so bionic on host shouldn\u0027t need this.\n\nHowever, now that I think about this, it\u0027s probably best to match match the real world, so changing to BIONIC.",
+      "parentUuid": "fbf9da59_2ca431e2",
+      "range": {
+        "startLine": 45,
+        "startChar": 14,
+        "endLine": 45,
+        "endChar": 21
+      },
+      "revId": "5d7fd5019ad31e0c072b4da01ea3bd61f0578432",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "51a1c35b_1cd1ee77",
         "filename": "src/tcache.c",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2018-11-01T20:40:52Z",
       "side": 1,
       "message": "BIONIC",
+      "range": {
+        "startLine": 12,
+        "startChar": 15,
+        "endLine": 12,
+        "endChar": 22
+      },
+      "revId": "5d7fd5019ad31e0c072b4da01ea3bd61f0578432",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "aa1a7ec3_b34f18c6",
+        "filename": "src/tcache.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2018-11-01T21:48:00Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "51a1c35b_1cd1ee77",
       "range": {
         "startLine": 12,
         "startChar": 15,
