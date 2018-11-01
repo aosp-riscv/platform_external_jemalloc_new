@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fbf9da59_2ca431e2",
+        "filename": "src/large.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-11-01T20:40:52Z",
+      "side": 1,
+      "message": "BIONIC?",
+      "range": {
+        "startLine": 45,
+        "startChar": 14,
+        "endLine": 45,
+        "endChar": 21
+      },
+      "revId": "5d7fd5019ad31e0c072b4da01ea3bd61f0578432",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "51a1c35b_1cd1ee77",
+        "filename": "src/tcache.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1003224
+      },
+      "writtenOn": "2018-11-01T20:40:52Z",
+      "side": 1,
+      "message": "BIONIC",
+      "range": {
+        "startLine": 12,
+        "startChar": 15,
+        "endLine": 12,
+        "endChar": 22
+      },
+      "revId": "5d7fd5019ad31e0c072b4da01ea3bd61f0578432",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
