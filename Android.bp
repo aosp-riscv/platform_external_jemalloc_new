@@ -23,9 +23,10 @@ common_cflags = [
     "-Wundef",
     "-Wno-format-zero-length",
     "-pipe",
-    "-g3",
+    //"-g3",
     "-fvisibility=hidden",
-    "-O3",
+    //"-O3",
+    "-O0",
     "-funroll-loops",
 
     // The following flags are for avoiding errors when compiling.

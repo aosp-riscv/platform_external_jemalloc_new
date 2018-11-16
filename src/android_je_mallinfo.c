@@ -28,9 +28,20 @@ struct mallinfo je_mallinfo() {
       mi.hblkhd += atomic_load_zu(&arena->stats.mapped, ATOMIC_ACQUIRE);
       mi.uordblks += atomic_load_zu(&arena->stats.allocated_large, ATOMIC_ACQUIRE);
 
+      /* Accumulate the large allocations. */
+      for (unsigned j = 0; j < NSIZES - NBINS; j++) {
+        /* Read ndalloc first so that we guarantee nmalloc >= ndalloc. */
+        uint64_t ndalloc = arena_stats_read_u64(TSDN_NULL, &arena->stats, &arena->stats.lstats[j].ndalloc);
+        uint64_t nmalloc = arena_stats_read_u64(TSDN_NULL, &arena->stats, &arena->stats.lstats[j].nmalloc);
+        size_t allocs = (size_t)(nmalloc - ndalloc);
+        mi.uordblks += sz_index2size(NBINS + j) * allocs;
+      }
+
+      /* Accumulate the small bins. */
       for (unsigned j = 0; j < NBINS; j++) {
         bin_t* bin = &arena->bins[j];
 
+        /* NOTE: This includes allocations cached on every thread. */
         malloc_mutex_lock(TSDN_NULL, &bin->lock);
         mi.uordblks += bin_infos[j].reg_size * bin->stats.curregs;
         malloc_mutex_unlock(TSDN_NULL, &bin->lock);
