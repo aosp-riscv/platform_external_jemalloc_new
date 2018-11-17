@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5e974ea6_26707f3e",
+        "filename": "src/android_je_mallinfo.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1042828
+      },
+      "writtenOn": "2018-11-17T00:41:30Z",
+      "side": 1,
+      "message": "Is it easy to explain why this doesn\u0027t include the missing objects? It fooled me earlier.",
+      "range": {
+        "startLine": 29,
+        "startChar": 44,
+        "endLine": 29,
+        "endChar": 65
+      },
+      "revId": "49c1f192bb3f31fa7a304b270fc1c1807f171277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "3ea775c3_c500f7c7",
+        "filename": "src/android_je_mallinfo.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1042828
+      },
+      "writtenOn": "2018-11-17T00:41:30Z",
+      "side": 1,
+      "message": "I assume that this is smaller than, or on the same order of NBINS, so that this doesn\u0027t come much more expensive?\n\nIIUC, this might look slightly cleaner if you did this at the end, and had j go from NBINS to NSIZES, so that you\u0027re traversing size classes in order. But that\u0027s a nit.",
+      "range": {
+        "startLine": 32,
+        "startChar": 31,
+        "endLine": 32,
+        "endChar": 45
+      },
+      "revId": "49c1f192bb3f31fa7a304b270fc1c1807f171277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    }
+  ]
+}
