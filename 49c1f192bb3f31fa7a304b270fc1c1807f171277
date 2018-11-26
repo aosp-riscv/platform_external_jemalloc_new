@@ -93,6 +93,30 @@
       "revId": "49c1f192bb3f31fa7a304b270fc1c1807f171277",
       "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "26f41f5d_835fe923",
+        "filename": "src/android_je_mallinfo.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1042828
+      },
+      "writtenOn": "2018-11-26T22:29:36Z",
+      "side": 1,
+      "message": "This all looks a bit more expensive than I would have liked. Given that each large block loop iterations doesn\u0027t look like it does much, maybe it\u0027s not too bad. If it turns out to be a problem, I can decrease my sampling rate.",
+      "parentUuid": "05cfaaa1_3d4974b8",
+      "range": {
+        "startLine": 32,
+        "startChar": 31,
+        "endLine": 32,
+        "endChar": 45
+      },
+      "revId": "49c1f192bb3f31fa7a304b270fc1c1807f171277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
     }
   ]
 }
