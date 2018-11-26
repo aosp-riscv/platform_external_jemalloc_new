@@ -25,6 +25,30 @@
     },
     {
       "key": {
+        "uuid": "c4a97a30_bee54919",
+        "filename": "src/android_je_mallinfo.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2018-11-26T20:19:07Z",
+      "side": 1,
+      "message": "I\u0027ve modified this to take out the addition of allocated_large. This is only ever incremented in the arena_stats_merge function, so it\u0027s, basically, only ever zero. That function is only ever called as a result of mallctl call (as far as I can tell).",
+      "parentUuid": "5e974ea6_26707f3e",
+      "range": {
+        "startLine": 29,
+        "startChar": 44,
+        "endLine": 29,
+        "endChar": 65
+      },
+      "revId": "49c1f192bb3f31fa7a304b270fc1c1807f171277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "3ea775c3_c500f7c7",
         "filename": "src/android_je_mallinfo.c",
         "patchSetId": 2
@@ -36,6 +60,30 @@
       "writtenOn": "2018-11-17T00:41:30Z",
       "side": 1,
       "message": "I assume that this is smaller than, or on the same order of NBINS, so that this doesn\u0027t come much more expensive?\n\nIIUC, this might look slightly cleaner if you did this at the end, and had j go from NBINS to NSIZES, so that you\u0027re traversing size classes in order. But that\u0027s a nit.",
+      "range": {
+        "startLine": 32,
+        "startChar": 31,
+        "endLine": 32,
+        "endChar": 45
+      },
+      "revId": "49c1f192bb3f31fa7a304b270fc1c1807f171277",
+      "serverId": "85c56323-6fa9-3386-8a01-6480fb634889",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "05cfaaa1_3d4974b8",
+        "filename": "src/android_je_mallinfo.c",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1019050
+      },
+      "writtenOn": "2018-11-26T20:19:07Z",
+      "side": 1,
+      "message": "NSIZES is on the order of a couple hundred, and NBINS is something close to about 40.\n\nI did move this below the small accumulator since it makes more sens to me (accumulate small stats, then large stats).",
+      "parentUuid": "3ea775c3_c500f7c7",
       "range": {
         "startLine": 32,
         "startChar": 31,
