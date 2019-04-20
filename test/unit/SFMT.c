@@ -35,6 +35,7 @@
  */
 #include "test/jemalloc_test.h"
 
+#undef BLOCK_SIZE
 #define BLOCK_SIZE 10000
 #define BLOCK_SIZE64 (BLOCK_SIZE / 2)
 #define COUNT_1 1000
