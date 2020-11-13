@@ -136,9 +136,11 @@ malloc_strtoumax(const char *restrict nptr, char **restrict endptr, int base) {
 		case '-':
 			neg = true;
 			/* Fall through. */
+			__attribute__((fallthrough));
 		case '+':
 			p++;
 			/* Fall through. */
+			__attribute__((fallthrough));
 		default:
 			goto label_prefix;
 		}
@@ -290,6 +292,7 @@ d2s(intmax_t x, char sign, char *s, size_t *slen_p) {
 			break;
 		}
 		/* Fall through. */
+		__attribute__((fallthrough));
 	case ' ':
 	case '+':
 		s--;

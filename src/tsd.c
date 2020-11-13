@@ -229,7 +229,9 @@ tsd_cleanup(void *arg) {
 		 */
 		assert_tsd_data_cleanup_done(tsd);
 		/* Fall through. */
+		__attribute__((fallthrough));
 	case tsd_state_nominal:
+		__attribute__((fallthrough));
 	case tsd_state_nominal_slow:
 		tsd_do_data_cleanup(tsd);
 		tsd->state = tsd_state_purgatory;
